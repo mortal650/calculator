@@ -1,43 +1,16 @@
-import java.util.Scanner;
-
-public class Calculator {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter first number: ");
-        double num1 = sc.nextDouble();
-
-        System.out.print("Enter operator (+, -, *, /): ");
-        char operator = sc.next().charAt(0);
-
-        System.out.print("Enter second number: ");
-        double num2 = sc.nextDouble();
-
-        double result;
-
-        switch (operator) {
-            case '+':
-                result = num1 + num2;
-                break;
-            case '-':
-                result = num1 - num2;
-                break;
-            case '*':
-                result = num1 * num2;
-                break;
-            case '/':
-                if (num2 == 0) {
-                    System.out.println("Error: Division by zero!");
-                    return;
-                }
-                result = num1 / num2;
-                break;
-            default:
-                System.out.println("Invalid operator!");
-                return;
-        }
-
-        System.out.println("Result: " + result);
-        sc.close();
-    }
+class Calculator
+{
+public static void main(String args[])
+{
+int n1=Integer.parseInt(args[0]);
+int n2=Integer.parseInt(args[1]);
+int r1 = n1+n2;
+int r2 = n1-n2;
+int r3 = n1*n2;
+int r4 = n1/n2;
+System.out.println("Addition: "+r1);
+System.out.println("Subtraction: "+r2);
+System.out.println("Multiplication: "+r3);
+System.out.println("Division: "+r4);
+}
 }
